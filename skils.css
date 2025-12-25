@@ -1,0 +1,28 @@
+#skills{
+    background-color: #0f172a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.custom-card {
+  background-color: var(--card-bg, #fff);
+  color: var(--card-text, #000);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15);
+}
+
+body.light .custom-card {
+  --card-bg: #fff;
+  --card-text: #000;
+}
+
+body.dark .custom-card {
+  --card-bg: #1f1f1f;
+  --card-text: #fff;
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+}

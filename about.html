@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<body>
+<section id="about" class="container my-5 fade-in">
+  <div class="row g-4 align-items-center">
+    
+    <!-- About Text -->
+    <div class="col-md-6 mx-auto">
+      <div class="custom-card p-4 text-center text-md-start">
+        <h2 class="mb-3">About Me</h2>
+        <p>Hello! I’m <strong>Oluwatobi</strong>, a passionate web developer focused on building responsive, interactive, and visually appealing websites. I enjoy turning ideas into functional projects, whether it’s a portfolio site,e-commerce sites, landing pages, or web application.</p>
+      </div>
+    </div>
+
+    <!-- About Image -->
+    <div class="col-md-4 mx-auto text-center" >
+      <div class="custom-card p-3"style="background-color: grey;">
+        <img src="./oluwatobi.png" alt="Oluwatobi" class="img-fluid rounded-circle" style="max-width: 200px;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade-in');
+  
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+});
+</script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>     
+</body>
+</html>
